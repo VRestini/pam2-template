@@ -1,15 +1,33 @@
-<?xml version="1.0" encoding="UTF-8" ?>
+<?xml version="1.0" encoding="utf-8" ?>
 <Shell
     x:Class="PAM_Astronomy.AppShell"
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:local="clr-namespace:PAM_Astronomy.Views"
-    Shell.FlyoutBehavior="Disabled"
-    Title="PAM_Astronomy">
+    Shell.FlyoutBehavior="Flyout"
+    Title="PAM_Astronomy"
+  >
+    <Shell.FlyoutHeader>
+        <Grid HeightRequest="100"
+BackgroundColor="DarkSlateBlue">
+            <Image Source="moon.png" />
+        </Grid>
+    </Shell.FlyoutHeader>
 
-    <ShellContent
-        Title="MoonPhase"
-        ContentTemplate="{DataTemplate local:MoonPhaseView}"
-        Route="MoonPhaseView" />
+
+    <FlyoutItem Title="Astronomy" Icon="moon.png" FlyoutDisplayOptions="AsMultipleItems">
+        
+        <ShellContent Title="Moon Phase" Icon="moon.png"
+ ContentTemplate="{DataTemplate local:MoonPhaseView}"/>
+        <ShellContent Title="Sunrise" Icon="sun.png"
+ ContentTemplate="{DataTemplate local:SunriseView}"/>
+    </FlyoutItem>
+    <FlyoutItem Title="About" Icon="question.png">
+        <ShellContent
+ ContentTemplate="{DataTemplate local:AboutPageView}"/>
+    </FlyoutItem>
+    
+    
+
 
 </Shell>

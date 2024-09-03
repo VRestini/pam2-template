@@ -6,6 +6,7 @@ public partial class MoonPhaseView : ContentPage
 	public MoonPhaseView()
 	{
 		InitializeComponent();
+        InitializeUI();
 	}
 
     void InitializeUI()
