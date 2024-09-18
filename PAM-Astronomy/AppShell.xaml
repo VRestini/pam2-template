@@ -8,26 +8,21 @@
     Title="PAM_Astronomy"
   >
     <Shell.FlyoutHeader>
-        <Grid HeightRequest="100"
-BackgroundColor="DarkSlateBlue">
-            <Image Source="moon.png" />
+        <Grid HeightRequest="100" BackgroundColor="DarkSlateBlue">
+            <Image Source="moon.png"/>
         </Grid>
     </Shell.FlyoutHeader>
 
-
-    <FlyoutItem Title="Astronomy" Icon="moon.png" FlyoutDisplayOptions="AsMultipleItems">
-        
-        <ShellContent Title="Moon Phase" Icon="moon.png"
- ContentTemplate="{DataTemplate local:MoonPhaseView}"/>
-        <ShellContent Title="Sunrise" Icon="sun.png"
- ContentTemplate="{DataTemplate local:SunriseView}"/>
+    <FlyoutItem Title="Astronomy" Icon="moon.png">
+        <ShellContent Title="Moon" Icon="moon.png"
+ ContentTemplate="{DataTemplate local:MoonPhaseView}" />
+        <ShellContent Title="Daylight" Icon="sun.png"
+ ContentTemplate="{DataTemplate local:SunriseView}" />
+        <ShellContent Title="Bodies" Icon="comet.png"
+ ContentTemplate="{DataTemplate local:AstronomicalBodiesView}"/>
     </FlyoutItem>
     <FlyoutItem Title="About" Icon="question.png">
         <ShellContent
  ContentTemplate="{DataTemplate local:AboutPageView}"/>
     </FlyoutItem>
-    
-    
-
-
 </Shell>

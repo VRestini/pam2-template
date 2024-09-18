@@ -1,11 +1,13 @@
-﻿namespace PAM_Astronomy
+﻿using PAM_Astronomy.Views;
+
+namespace PAM_Astronomy
 {
     public partial class AppShell : Shell
     {
         public AppShell()
         {
             InitializeComponent();
-           // Routing.RegisterRoute("astronomicalbodydetails", typeof(AstronomicalBodyView));
+            Routing.RegisterRoute("astronomicalbodydetails", typeof(AstronomicalBodyView));
         }
     }
 }
